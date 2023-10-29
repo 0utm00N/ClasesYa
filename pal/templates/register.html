@@ -1,0 +1,25 @@
+{% extends './layout.html' %}
+
+{% block content %}
+
+<div class="container mt-5 ">
+    <div class="card">
+        <h1 class="ms-3">ClasesYA - Registro</h1>
+        <form class="form ms-3" method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+        
+            <button  class="mb-3" type="submit" id="submit" >registrarse</button>
+        </form>
+    </div>
+</div>    
+
+{% endblock %}
+
+
+<form class="form" method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+
+    <button type="submit" id="submit" >registrarse</button>
+</form>

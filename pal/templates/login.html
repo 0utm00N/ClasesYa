@@ -1,0 +1,23 @@
+{% extends './layout.html' %}
+{% load static %}
+
+{% block content %}
+
+<div class="container mt-5 ">
+    <div class="card">
+        <h1 class="ms-3">ClasesYA</h1>
+        <form class="from ms-3 mt-3" method="post" >
+            {% csrf_token %}
+            {{ form.as_p }}
+        
+            <button class="mb-3"  type="submit" id="submit">Inicar Sesion</button>
+            <button class="btn-uwu" id="btn-uwu">registrate</button>
+        </form>
+    </div>
+</div>
+
+<script src="{% static 'js/login.js' %}"></script>
+
+{% endblock %}
+
+
